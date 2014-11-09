@@ -1,1 +1,23 @@
-receiversTemplate.html
+<ion-view hide-nav-bar=true title="Receivers" >
+  <ion-content>
+    <!--sets up the main div where the camera image will reside
+    is swipable to bring to bring to pending(swiperight) and results(swipeleft) -->
+    <ion-list>
+      <ion-item ng-repeat="receiver in allReceivers">
+          {{receiver.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <!-- Footer which contains a button to make the final send -->
+  <ion-footer-bar class="bar-dark">
+      <button class="button button-stable button-assertive button-outline"
+            ng-click="cancelSend()">
+        Cancel
+      </button>    
+    <h1 class="title"> </h1>
+    <button class="button button-stable button-balanced button-outline"
+            ng-click="setReceivers()">
+        Send
+    </button>
+  </ion-footer-bar>
+</ion-view>

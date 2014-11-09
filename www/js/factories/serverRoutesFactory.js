@@ -6,6 +6,8 @@ angular.module('App.ServerRoutes', [])
     sendContent: 'someRoute',
     getPending: 'someRoute',
     sendVote: 'someRoute',
-    getResults: 'someRoute'
+    getResults: 'someRoute',
+    getReceivers: 'someRoute',
+    postContent: 'someRoute'
   };
 });

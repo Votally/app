@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true" title="Home" >
+<ion-view hide-nav-bar=true title="Home" >
   <ion-content scroll=false >
     <!--sets up the main div where the camera image will reside
     is swipable to bring to bring to pending(swiperight) and results(swipeleft) -->
@@ -11,7 +11,9 @@
     contains the text to be sent with a picture-->
     <div class="bar bar-footer bar-light polaroid-border">
       <label class="item item-input polaroid-text">
-        <input type="text" placeholder="Touch to add message...">
+        <input type="text" placeholder="Touch to add message..."
+               ng-model="homeText"
+               ng-change="addText(homeText)">
       </label>
     </div>
   </ion-content>
@@ -24,7 +26,7 @@
     </button>
     <h1 class="title"><div class="ion-disc shutter" ng-click="getPhoto()"></div></h1>
     <button class="button button-stable button-balanced button-outline"
-            ng-click="">
+            ng-click="send()">
       Send
     </button>
   </ion-footer-bar>
