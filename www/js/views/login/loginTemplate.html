@@ -9,13 +9,11 @@
 		<div class="list">
 		  <label class="item item-input">
 		  	<i class="icon ion-person"></i>
-		    <span class="input-label">Username</span>
-		    <input ng-model="usernameInput" type="text">
+		    <input ng-model="usernameInput" placeholder=" Username" type="text">
 		  </label>
 		  <label class="item item-input">
-		  	<i class="icon ion-key"></i>
-		    <span class="input-label">Password</span>
-		    <input ng-model="passwordInput" type="password">
+		  	<i class="icon ion-locked"></i>
+		    <input ng-model="passwordInput" placeholder=" Password" type="password">
 		  </label>
 		  <label class="item">
 			  <button class="button button-block button-positive" ng-click="logIn(usernameInput, passwordInput)">
