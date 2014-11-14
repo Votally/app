@@ -68,3 +68,11 @@
   color: #fff;
 }
 
+/*============FOR RECEIVERS VIEW TEMPLATE=============*/
+.input-label {
+  padding-left: 5px;
+}
+
+.error {
+  color: red;
+}

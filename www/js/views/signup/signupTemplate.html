@@ -1,28 +1,62 @@
 <ion-view>
 	<ion-nav-bar>
 	  	<h1 class="title">
-	  		<i class="icon ion-ionic"></i>
+	  		<i class="icon ion-compose"></i>
 	  		Signup
 	  	</h1>
 	  </ion-nav-bar>
 	<ion-content>
-		<div class="list">
-		  <label class="item item-input">
-		  	<i class="icon ion-person"></i>
-		    <span class="input-label">Username</span>
-		    <input ng-model="usernameInput" type="text">
-		  </label>
-		  <label class="item item-input">
-		  	<i class="icon ion-key"></i>
-		    <span class="input-label">Password</span>
-		    <input ng-model="passwordInput" type="password">
-		  </label>
-	    <label class="item">
-	  	  <button class="button button-block button-calm" ng-click="signUp(usernameInput, passwordInput)">
-	  	  	signup
-	  	  </button>
-	    </label>
-		</div>
-
+		<form name="signupForm" novalidate ng-submit="signUp(usernameInput, passwordInput)">
+			<div class="list">
+				<!-- Username input and validation -->
+			  <label class="item item-input">
+			  	<i class="icon ion-person"></i>
+			    <span class="input-label">Username</span>
+			    <input ng-model="usernameInput" name="username" type="text" ng-minlength=6 ng-maxlength=16 required >
+			    <div class="error-container" ng-show="signupForm.username.$dirty && signupForm.username.$invalid">
+			    		<small class="error" ng-show="signupForm.username.$error.required">Username required</small>
+			    		<small class="error" ng-show="signupForm.username.$error.minlength">6 characters min</small>
+			    		<small class="error" ng-show="signupForm.username.$error.maxlength">16 characters max</small>
+			    </div>
+			  </label>
+ 			  <!-- Password input and validation -->
+ 			  <label class="item item-input">
+			  	<i class="icon ion-key"></i>
+			    <span class="input-label">Password</span>
+			    <input ng-model="passwordInput" name="password" type="password" ng-minlength=6 ng-maxlength=16 required>
+			    <div class="error-container" ng-show="signupForm.password.$dirty && signupForm.password.$invalid">
+			    		<small class="error" ng-show="signupForm.password.$error.required">Password required</small>
+			    		<small class="error" ng-show="signupForm.password.$error.minlength">6 characters min</small>
+			    		<small class="error" ng-show="signupForm.password.$error.maxlength">16 characters max</small>
+			    </div>
+			  </label>
+			  <!-- Confirm Password input and validation -->
+			  <label class="item item-input">
+			  	<i class="icon ion-key"></i>
+			    <span class="input-label">Confirm Password</span>
+			    <input ng-model="confirmInput" name="confirmed" type="password" ng-minlength=6 ng-maxlength=16 required>
+			    <div class="error-container" ng-show="signupForm.confirmed.$dirty && signupForm.confirmed.$invalid">
+			    		<small class="error" ng-show="signupForm.confirmed.$error.required">Password required</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.minlength">6 characters min</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.maxlength">16 characters max</small>
+			    </div>
+			  </label>
+			  <!-- Email input and validation -->
+			  <label class="item item-input">
+			  	<i class="icon ion-email"></i>
+			    <span class="input-label">Email</span>
+			    <input ng-model="emailInput" name="email" type="email" required>
+			    <div class="error-container" ng-show="signupForm.email.$dirty && signupForm.email.$invalid">
+			    		<small class="error" ng-show="signupForm.email.$error.required">Email required</small>
+			    		<small class="error" ng-show="signupForm.email.$error.email">Invalid Email</small>
+			    </div>
+			  </label>
+		    <label class="item">
+		  	  <button class="button button-block button-calm" type="submit">
+		  	  	signup
+		  	  </button>
+		    </label>
+			</div>
+		</form>	
 	</ion-content>
 </ion-view>
