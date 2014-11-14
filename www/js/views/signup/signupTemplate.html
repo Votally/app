@@ -15,9 +15,15 @@
 			    <input ng-model="usernameInput" name="username" type="text" ng-minlength=6 ng-maxlength=16 required >
 			  </label>
 			    <div class="error-container" ng-show="signupForm.username.$dirty && signupForm.username.$invalid">
-			    		<small class="error" ng-show="signupForm.username.$error.required">Username required</small>
-			    		<small class="error" ng-show="signupForm.username.$error.minlength">6 characters min</small>
-			    		<small class="error" ng-show="signupForm.username.$error.maxlength">16 characters max</small>
+			    		<small class="error" ng-show="signupForm.username.$error.required">
+			    			Please enter a username
+		    			</small>
+			    		<small class="error" ng-show="signupForm.username.$error.minlength">
+			    			Must contain at least 6 characters
+			    		</small>
+			    		<small class="error" ng-show="signupForm.username.$error.maxlength">
+			    			Exceeds the 16 characters limit
+			    		</small>
 			    </div>
  			  <!-- Password input and validation -->
  			  <label class="item item-input">
@@ -26,9 +32,15 @@
 			    <input ng-model="passwordInput" name="password" type="password" ng-minlength=6 ng-maxlength=16 required>
 			  </label>
 			    <div class="error-container" ng-show="signupForm.password.$dirty && signupForm.password.$invalid">
-			    		<small class="error" ng-show="signupForm.password.$error.required">Password required</small>
-			    		<small class="error" ng-show="signupForm.password.$error.minlength">6 characters min</small>
-			    		<small class="error" ng-show="signupForm.password.$error.maxlength">16 characters max</small>
+			    		<small class="error" ng-show="signupForm.password.$error.required">
+			    			Please enter a password
+			    		</small>
+			    		<small class="error" ng-show="signupForm.password.$error.minlength">
+			    			Must contain at least 6 characters
+			    		</small>
+			    		<small class="error" ng-show="signupForm.password.$error.maxlength">
+			    			Exceeds the 16 characters limit
+			    		</small>
 			    </div>
 			  <!-- Confirm Password input and validation -->
 			  <label class="item item-input">
@@ -37,9 +49,15 @@
 			    <input ng-model="confirmInput" name="confirmed" type="password" ng-minlength=6 ng-maxlength=16 required>
 			  </label>
 			    <div class="error-container" ng-show="signupForm.confirmed.$dirty && signupForm.confirmed.$invalid">
-			    		<small class="error" ng-show="signupForm.confirmed.$error.required">Password required</small>
-			    		<small class="error" ng-show="signupForm.confirmed.$error.minlength">6 characters min</small>
-			    		<small class="error" ng-show="signupForm.confirmed.$error.maxlength">16 characters max</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.required">
+			    			Please confirm your password
+			    		</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.minlength">
+			    			Must contain at least 6 characters
+			    		</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.maxlength">
+			    			Exceeds the 16 characters limit
+			    		</small>
 			    </div>
 			  <!-- Email input and validation -->
 			  <label class="item item-input">
@@ -48,8 +66,12 @@
 			    <input ng-model="emailInput" name="email" type="email" required>
 			  </label>
 			    <div class="error-container" ng-show="signupForm.email.$dirty && signupForm.email.$invalid">
-			    		<small class="error" ng-show="signupForm.email.$error.required">Email required</small>
-			    		<small class="error" ng-show="signupForm.email.$error.email">Invalid Email</small>
+			    		<small class="error" ng-show="signupForm.email.$error.required">
+			    			Please enter your email
+			    		</small>
+			    		<small class="error" ng-show="signupForm.email.$error.email">
+			    			Please enter a valid email
+			    		</small>
 			    </div>
 		    <label class="item">
 		  	  <button class="button button-block button-calm" type="submit">
