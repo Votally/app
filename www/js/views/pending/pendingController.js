@@ -37,7 +37,7 @@ angular.module('App.Pending', [])
 	//get all the pendings for the user
 	var getPending = function(){
 
-		ServerRequests.post(userId, ServerRoutes.getPending)
+		ServerRequests.get(userId, ServerRoutes.getPending)
 		  .then(function(response){
 				//  response looks like...
 				// {

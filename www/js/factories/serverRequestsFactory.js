@@ -2,10 +2,11 @@ angular.module('App.ServerRequests', [])
 
 .factory('ServerRequests', function ($http) {
   //make get request to the route
-  var get = function (route) {
+  var get = function (data, route) {
     return $http({
       method: 'GET',
-      url: route
+      url: route,
+      data: data
     })
     .then(function (response) {
       return response.data;
