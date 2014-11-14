@@ -68,11 +68,26 @@
   color: #fff;
 }
 
-/*============FOR RECEIVERS VIEW TEMPLATE=============*/
+/*============FOR SIGNUP VIEW TEMPLATE=============*/
 .input-label {
   padding-left: 5px;
 }
 
 .error {
   color: red;
+  padding-left: 20px;
+}
+
+/*============FOR RESULTS VIEW TEMPLATE=============*/
+
+.topic {
+  display: block;
+}
+.pictureframe{
+  display: inline;
+  float: left;
+}
+.votes {
+  display: inline;
+  float: left;
 }
