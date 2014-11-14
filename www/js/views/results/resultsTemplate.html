@@ -1,27 +1,18 @@
-<style type="text/css">
-.topic {
-  display: block;
-}
-.pictureframe{
-  display: inline;
-  float: left;
-}
-.votes {
-  display: inline;
-  float: left;
-}
-</style>
-
 <ion-view>
 
-<ion-nav-buttons side="left">
-  <button class="button icon ion-navicon" ng-click="routeToHome()">
-  </button>
-</ion-nav-buttons>
-
-<ion-nav-buttons side="right">
-  <button class="button icon ion-gear-a" ng-click="routeToSettings()"></button>
-</ion-nav-buttons>
+  <ion-nav-bar>
+    <h1 class="title">
+      <i class="icon ion-stats-bars"></i>
+      Results
+    </h1>
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-ios7-undo" ng-click="routeToHome()">
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button icon ion-gear-a" ng-click="routeToSettings()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
 
   <ion-content>
     <div class="resultsContainer">

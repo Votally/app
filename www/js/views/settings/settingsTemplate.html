@@ -1,46 +1,44 @@
-<style type="text/css">
+<ion-view title="Settings">
 
-</style>
-
-<ion-view>
-
-<ion-nav-buttons side="left">
-  <button class="button icon ion-android-arrow-back" ng-click="routeToResults()">
-  </button>
-</ion-nav-buttons>
+  <ion-nav-bar>
+    <h1 class="title">
+      <i class="icon ion-settings"></i>
+      Settings
+    </h1>
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-ios7-undo" ng-click="routeToResults()">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
 
   <ion-content>
 
-<div class="list">
+    <div class="list">
 
-  <div class="item item-divider">
-    My Account
-  </div>
+      <div class="item item-divider">
+        My Account
+      </div>
 
-  <a class="item item-icon-left" href="">
-    <i class="icon ion-person"></i>
-    Username
-  </a>
-  <a class="item item-icon-left" href="">
-    <i class="icon ion-email"></i>
-    Email
-  </a>
+      <a class="item item-icon-left" href="">
+        <i class="icon ion-person"></i>
+        Username
+      </a>
+      <a class="item item-icon-left" href="">
+        <i class="icon ion-email"></i>
+        Email
+      </a>
 
-   <div class="item item-divider">
-    Account Activities
-  </div>
+       <div class="item item-divider">
+        Account Activities
+      </div>
 
-  <a class="item item-icon-left" ng-click="logout()">
-    <i class="icon ion-sad"></i>
-    Logout
-  </a>
+      <a class="item item-icon-left" ng-click="logout()">
+        <i class="icon ion-sad"></i>
+        Logout
+      </a>
 
-</div>
-
-
-
-
-
+    </div>
 
   </ion-content>
+
 </ion-view>
