@@ -4,18 +4,17 @@ angular.module('App.Pending', [])
   //======================== helper functions ==============================
 
   var showContent = function(currentContent){
-  	console.log('setting up to show the content 1...');
+  	console.log('setting up to show the content ...');
   	contentId = currentContent.contentId;
   	$scope.topic = currentContent.topic;
-  	$scope.sender = currentContent.userName;
-  	$scope.pictureUrl = currentContent.picture;
+  	$scope.sender = currentContent.username;
+  	$scope.pictureUrl = currentContent.data;
   };
 
   var checkPending = function(){
-  	console.log('checking the pending...');
 	  //if there are no pending, redirect back to home
 		if(!pendingList || pendingList.length === 0){
-			//redirect to home swipe back??
+			//redirect to home
 			$location.path('/');
 		}else{
 			//show the 1st pending item
@@ -36,8 +35,7 @@ angular.module('App.Pending', [])
 
 	//get all the pendings for the user
 	var getPending = function(){
-
-		ServerRequests.post(userId, ServerRoutes.getPending)
+		ServerRequests.post({ userId: userId }, ServerRoutes.getPending)
 		  .then(function(response){
 				//  response looks like...
 				// {
@@ -49,37 +47,8 @@ angular.module('App.Pending', [])
 				// 		userName: string
 				// 	}, {}, ...]
 				// } 
-		  	pendingList = response.pendingContents;
-		  	//    pendingList = [
-		  	//    	{ contentId: 1,
-		  	//    	  topic: 'This owl beanie for Rich?',
-		  	//    	  picture: 'http://assets.inhabitots.com/wp-content/uploads/2013/11/adorable-cozy-owl-hat-537x365.jpg',
-		  	//    	  userId: 100,
-		  	//    	  userName: 'Teresa' },
-		  	//    	{ contentId: 2,
-		  	//    	  topic: 'for lunch?',
-		  	//    	  picture: 'http://www.scmp.com/sites/default/files/styles/980w/public/2013/07/31/turtle-burger-l.jpg?itok=SfyO-6l_',
-		  	//    	  userId: 200,
-		  	//    	  userName: 'Bace' },
-		  	//    	{ contentId: 3,
-		  	//    	  topic: 'still grumpy?',
-		  	//    	  picture: 'http://i.imgur.com/Cxagv.jpg',
-		  	//    	  userId: 300,
-		  	//    	  userName: 'Rich' },
-		  	//    	{ contentId: 4,
-		  	//    	  topic: 'wanna play?',
-		  	//    	  picture: 'http://icons.iconarchive.com/icons/yellowicon/game-stars/256/Mario-icon.png',
-		  	//    	  userId: 400,
-		  	//    	  userName: 'Satoko' },
-		  	//    	{ contentId: 5,
-		  	//    	  topic: 'mall?',
-		  	//    	  picture: 'http://www.thespicehut.com/Assets/bubble-tea-bellingham.jpg',
-		  	//    	  userId: 400,
-		  	//    	  userName: 'Satoko' }
-		  	   	  
-		  	//    ];
+		  	pendingList = response.contents;
 			  checkPending();
-
 		  })
 		  //if there is an error getting the pendings, console an error.
 		  .catch(function(error){
@@ -111,3 +80,31 @@ angular.module('App.Pending', [])
 
 });
 
+//======================= fake data ============================
+//    pendingList = [
+//    	{ contentId: 1,
+//    	  topic: 'This owl beanie for Rich?',
+//    	  picture: 'http://assets.inhabitots.com/wp-content/uploads/2013/11/adorable-cozy-owl-hat-537x365.jpg',
+//    	  userId: 100,
+//    	  userName: 'Teresa' },
+//    	{ contentId: 2,
+//    	  topic: 'for lunch?',
+//    	  picture: 'http://www.scmp.com/sites/default/files/styles/980w/public/2013/07/31/turtle-burger-l.jpg?itok=SfyO-6l_',
+//    	  userId: 200,
+//    	  userName: 'Bace' },
+//    	{ contentId: 3,
+//    	  topic: 'still grumpy?',
+//    	  picture: 'http://i.imgur.com/Cxagv.jpg',
+//    	  userId: 300,
+//    	  userName: 'Rich' },
+//    	{ contentId: 4,
+//    	  topic: 'wanna play?',
+//    	  picture: 'http://icons.iconarchive.com/icons/yellowicon/game-stars/256/Mario-icon.png',
+//    	  userId: 400,
+//    	  userName: 'Satoko' },
+//    	{ contentId: 5,
+//    	  topic: 'mall?',
+//    	  picture: 'http://www.thespicehut.com/Assets/bubble-tea-bellingham.jpg',
+//    	  userId: 400,
+//    	  userName: 'Satoko' }
+//    ];

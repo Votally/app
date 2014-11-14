@@ -14,7 +14,6 @@ angular.module('App.ServerRequests', [])
 
   //make post request to the route with given data
   var post = function (data, route) {
-    console.log(data);
     return $http({
       method: 'POST',
       url: route,
