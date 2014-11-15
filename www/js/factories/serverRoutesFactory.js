@@ -3,11 +3,11 @@ angular.module('App.ServerRoutes', [])
 .factory('ServerRoutes', function(){
   //return an object of the routes
   return {
-    sendContent: 'someRoute',
-    getPending: 'someRoute',
-    sendVote: 'someRoute',
-    getResults: 'someRoute',
-    getReceivers: 'someRoute',
-    postContent: 'someRoute'
+    sendContent: '/receivers/sendContent',
+    getPending: '/pending/getPending',
+    sendVote: '/pending/sendVote',
+    getResults: '/results/getResults',
+    getReceivers: '/receivers/getContacts',
+    postContent: '/receivers/sendContent'
   };
 });

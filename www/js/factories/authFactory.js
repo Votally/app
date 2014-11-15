@@ -12,7 +12,7 @@ angular.module('App.Auth', [])
     };
     return $http({
       method: 'POST',
-      url: '========add later===========',
+      url: route,
       data: userInfo
     })
     .then(function (response) {
@@ -31,11 +31,11 @@ angular.module('App.Auth', [])
   
   //===================SERVICE FUNCTION========================
   var login = function (username, password) {
-    return auth(username, password, 'route for login');
+    return auth(username, password, '/user/login');
   };
 
   var signup = function (username, password) {
-    return auth(username, password, 'route for signup');
+    return auth(username, password, '/user/signup');
   };
 
   var loggedIn = function () {
