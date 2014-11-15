@@ -8,7 +8,7 @@
 	<ion-content>
 		<form name="signupForm" novalidate ng-submit="signUp(usernameInput, passwordInput)">
 			<div class="list">
-				<!-- Username input and validation -->
+<!-- Username input and validation -->
 			  <label class="item item-input">
 			  	<i class="icon ion-person"></i>
 			    <span class="input-label">Username</span>
@@ -25,7 +25,7 @@
 			    			Exceeds the 16 characters limit
 			    		</small>
 			    </div>
- 			  <!-- Password input and validation -->
+<!-- Password input and validation -->
  			  <label class="item item-input">
 			  	<i class="icon ion-key"></i>
 			    <span class="input-label">Password</span>
@@ -42,11 +42,12 @@
 			    			Exceeds the 16 characters limit
 			    		</small>
 			    </div>
-			  <!-- Confirm Password input and validation -->
+<!-- Confirm Password input and validation -->
 			  <label class="item item-input">
 			  	<i class="icon ion-key"></i>
 			    <span class="input-label">Confirm Password</span>
-			    <input ng-model="confirmInput" name="confirmed" type="password" ng-minlength=6 ng-maxlength=16 required>
+			    <input ng-model="confirmInput" name="confirmed" type="password" ng-minlength=6 ng-maxlength=16 
+			    	compare-input="passwordInput" required>
 			  </label>
 			    <div class="error-container" ng-show="signupForm.confirmed.$dirty && signupForm.confirmed.$invalid">
 			    		<small class="error" ng-show="signupForm.confirmed.$error.required">
@@ -58,19 +59,22 @@
 			    		<small class="error" ng-show="signupForm.confirmed.$error.maxlength">
 			    			Exceeds the 16 characters limit
 			    		</small>
+			    		<small class="error" ng-show="signupForm.confirmed.$error.compareInput">
+			    			Password does not match
+			    		</small>
 			    </div>
-			  <!-- Email input and validation -->
+<!-- Email input and validation -->
 			  <label class="item item-input">
 			  	<i class="icon ion-email"></i>
 			    <span class="input-label">Email</span>
 			    <input ng-model="emailInput" name="email" type="email" required>
 			  </label>
 			    <div class="error-container" ng-show="signupForm.email.$dirty && signupForm.email.$invalid">
-			    		<small class="error" ng-show="signupForm.email.$error.required">
-			    			Please enter your email
+			    	<small class="error" ng-show="signupForm.email.$error.required">
+			    			Please enter your email.
 			    		</small>
 			    		<small class="error" ng-show="signupForm.email.$error.email">
-			    			Please enter a valid email
+			    			Invalid email
 			    		</small>
 			    </div>
 		    <label class="item">
