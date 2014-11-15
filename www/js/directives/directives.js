@@ -11,4 +11,22 @@ angular.module('App.Directives', [])
   			})
   		}
   	}
+  })
+
+  .directive('compareInput', function(){
+    return {
+      require: 'ngModel',
+      scope: {
+        otherModelValue : '=compareInput'
+      },
+      link: function(scope, element, attributes, ngModel){
+        ngModel.$validators.compareInput = function(modelValue){
+          return modelValue == scope.otherModelValue;    
+        }
+        scope.$watch('otherModelValue', function(){
+          ngModel.$validate();
+        })
+      }
+    }
   });
+
