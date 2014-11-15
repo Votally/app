@@ -24,8 +24,7 @@ angular.module('App', [
   'App.Auth',
   'App.Camera',
   'App.Directives',
-  'App.ReceiversFactory',
-  //Angular Directives
+  'App.ReceiversFactory'
 ])
 
 .run(function($ionicPlatform, $rootScope, $state, Auth) {

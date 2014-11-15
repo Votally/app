@@ -1,43 +1,43 @@
 <ion-view>
   <ion-nav-bar>
-  	<h1 class="title">
-  		<i class="icon ion-log-in"></i>
-  		Login
-  	</h1>
+    <h1 class="title">
+      <i class="icon ion-log-in"></i>
+      Login
+    </h1>
   </ion-nav-bar>
-	<ion-content>
-		<form name="loginForm" novalidate ng-submit="logIn(usernameInput, passwordInput)">
-			<div class="list">
-			  <label class="item item-input">
-			  	<i class="icon ion-person"></i>
-			    <input ng-model="usernameInput" name="username" placeholder=" Username" type="text" required>
-			  </label>
-		    <div class="error-container" ng-show="loginForm.username.$invalid">
-		    		<small class="error" ng-show="loginForm.username.$error.required">
-		    			Please enter a username
-	    			</small>
-				</div>
-			  <label class="item item-input">
-			  	<i class="icon ion-locked"></i>
-			    <input ng-model="passwordInput" name="password" placeholder=" Password" type="password" required>
-			  </label>
-		    <div class="error-container" ng-show="loginForm.password.$invalid">
-		    		<small class="error" ng-show="loginForm.password.$error.required">
-		    			Please enter a password
-	    			</small>
-				</div>
-			  <label class="item">
-				  <button class="button button-block button-positive" type="submit">
-				  	login
-				  </button>
-			  </label>
-		    <label class="item">
-		    	<span>Don't have an account?</span>
-		  	  <button class="button button-block button-calm" ng-click="signUp()">
-		  	  	signup
-		  	  </button>
-		    </label>
-			</div>
-		</form>
-	</ion-content>
+  <ion-content>
+    <form name="loginForm" novalidate ng-submit="logIn(usernameInput, passwordInput)">
+      <div class="list">
+        <label class="item item-input">
+          <i class="icon ion-person"></i>
+          <input ng-model="usernameInput" name="username" placeholder=" Username" type="text" required>
+        </label>
+        <div class="error-container" ng-show="loginForm.username.$invalid">
+            <small class="error" ng-show="loginForm.username.$error.required">
+              Please enter a username
+            </small>
+        </div>
+        <label class="item item-input">
+          <i class="icon ion-locked"></i>
+          <input ng-model="passwordInput" name="password" placeholder=" Password" type="password" required>
+        </label>
+        <div class="error-container" ng-show="loginForm.password.$invalid">
+            <small class="error" ng-show="loginForm.password.$error.required">
+              Please enter a password
+            </small>
+        </div>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">
+            login
+          </button>
+        </label>
+        <label class="item">
+          <span>Don't have an account?</span>
+          <button class="button button-block button-calm" ng-click="signUp()">
+            signup
+          </button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
 </ion-view>
