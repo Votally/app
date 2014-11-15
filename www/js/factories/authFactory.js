@@ -31,10 +31,12 @@ angular.module('App.Auth', [])
   
   //===================SERVICE FUNCTION========================
   var login = function (username, password) {
+    //change the routes once our server is deployed.
     return auth(username, password, '/user/login');
   };
 
   var signup = function (username, password) {
+    //change the routes once our server is deployed.
     return auth(username, password, '/user/signup');
   };
 
