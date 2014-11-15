@@ -12,7 +12,7 @@
 			  	<i class="icon ion-person"></i>
 			    <input ng-model="usernameInput" name="username" placeholder=" Username" type="text" required>
 			  </label>
-		    <div class="error-container" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
+		    <div class="error-container" ng-show="loginForm.username.$invalid">
 		    		<small class="error" ng-show="loginForm.username.$error.required">
 		    			Please enter a username
 	    			</small>
@@ -21,7 +21,7 @@
 			  	<i class="icon ion-locked"></i>
 			    <input ng-model="passwordInput" name="password" placeholder=" Password" type="password" required>
 			  </label>
-		    <div class="error-container" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+		    <div class="error-container" ng-show="loginForm.password.$invalid">
 		    		<small class="error" ng-show="loginForm.password.$error.required">
 		    			Please enter a password
 	    			</small>
