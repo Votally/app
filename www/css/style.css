@@ -78,21 +78,6 @@
   padding-left: 15px;
 }
 
-/*============FOR RESULTS VIEW TEMPLATE=============*/
-
-.topic {
-  display: block;
-}
-.pictureframe{
-  display: inline;
-  float: left;
-}
-.votes {
-  display: inline;
-  float: left;
-}
-
-
 /*============FOR SETTINGS VIEW=============*/
 
 .highlight {
@@ -108,35 +93,10 @@
   color: #222;
   font-weight: bold;
 
-/*graph */
-
-.bargraph {
-    list-style: none;
-    padding-top: 20px;
-    /*width:560px;*/
 }
+/*============FOR RESULTS VIEW TEMPLATE=============*/
 
-ul.bargraph li {
-    height: 35px;
-    color: white;
-    text-align: left;
-    font-style: italic;
-    font-weight:bolder;
-    font-size: 14px;
-    line-height: 35px;
-    padding: 0px 20px;
-    margin-bottom: 5px;
-}
- 
-ul.bargraph li.redpink {
-background: #EF465B;
-/*width:95%;*/
-}
 
-ul.bargraph li.greenbright {
-background: #36B669;
-/*width:40%;*/
 
-}
 
 

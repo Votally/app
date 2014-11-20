@@ -13,8 +13,9 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
-    <div class="resultsContainer">
+    
       <div class = "list"> 
+<<<<<<< HEAD
 
 
 
@@ -24,28 +25,30 @@
 
           <div class="pictureframe">
             <img class ="picture" style="height:auto; width:auto; max-width:300px; max-height:300px;" ng-src="{{result.data}}">
+=======
+        <a ng-repeat="result in results" class="item">
+          <div class = "card">
+            <div class = "item item-divider centertext">
+              {{result.topic}}
+            </div>
+            <div class="row">
+              <div class="item item-image-wrap col">
+                <img class ="pictureframe" style="height:auto; width:auto; max-width:150px; max-height:150px;" ng-src ="{{result.data}}">
+              </div>
+              <div class="item item-image-wrap col">
+                <div class="col">
+                  <ul class="bargraph">
+                    <li class="greenbright" style='width:{{result.yesPercent}}'>Yes, {{result.yes}}</li>
+                    <span></span>
+                    <li class="redpink lefttext" style='width:{{result.noPercent}}'>No,{{result.no}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+>>>>>>> (feat) arrange picture, topic, chart to correct positions
           </div>
-          <!-- <div class="votes">
-            <h2 class="yes">Yes!{{result.yes}}</h2>
-            <h2 class="no"> No!{{result.no}}</h2> 
-          </div> -->
-         <!--  <div>
-          <c3-chart id="chart" config="result.config"></c3-chart>
-        </div> -->
-
-        <div>
-        <ul class="bargraph">
-          <li class="greenbright" style='width:{{result.yesPercent}}'>{{result.yes}}
-          </li>
-          <li class="redpink" style='width:{{result.noPercent}}'>{{result.no}}</li>
-        </ul>
-
-        </div>
         </a>
-
-
-
       </div>
-    </div>
+   
   </ion-content>
 </ion-view>
