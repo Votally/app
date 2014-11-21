@@ -13,7 +13,38 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
+
+    <div class="polaroid_box">
+      <ul class="polaroids">
+        <li class="polaroids" ng-repeat="result in results">
+          <a href="" title="{{result.topic}}">
+            <img style="height:auto; width:auto; max-width:300px; max-height:300px;" ng-src ="{{result.data}}" alt="{{result.topic}}">
+          </a>
+          <div class="">
+                <div>
+                  <ul class="chart">
+                    <li>
+                    <span style='height:{{result.yesPercent}}' title="{{result.yes}}">
+                      <!-- <div class="percent">{{result.yesPercent}}</div>
+                      <div class="skill">Yes</div> -->
+                      </span>
+                    </li>
+                    <li>
+                    <span style='height:{{result.noPercent}}' title="{{result.no}}">
+                     <!--  <div class="percent">{{result.noPercent}}</div>
+                      <div class="skill">No</div> -->
+                    </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </li>
+      </ul>
+    </div>
+
+
     
+<<<<<<< HEAD
       <div class = "list"> 
 <<<<<<< HEAD
 
@@ -27,6 +58,10 @@
             <img class ="picture" style="height:auto; width:auto; max-width:300px; max-height:300px;" ng-src="{{result.data}}">
 =======
         <a ng-repeat="result in results" class="item">
+=======
+      <!-- <div class = "list"> 
+        <a ng-repeat="result in results" class="item" href='#'>
+>>>>>>> (feat) add polaroid css to resultsView
           <div class = "card">
             <div class = "item item-divider centertext">
               {{result.topic}}
@@ -48,7 +83,7 @@
 >>>>>>> (feat) arrange picture, topic, chart to correct positions
           </div>
         </a>
-      </div>
+      </div> -->
    
   </ion-content>
 </ion-view>

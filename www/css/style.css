@@ -99,4 +99,121 @@
 
 
 
+/*polaroids css*/
 
+
+
+a img {
+  border: 1px solid #BBB;
+  padding: 2px;
+  margin: 10px 20px 10px 0;
+  vertical-align: top;
+}
+
+a img.last {
+  margin-right: 0;  
+}
+
+.polaroid_box {
+  margin:20px 0 0px 25px;
+}
+
+ul.polaroids {
+  /*width: 95%;*/
+  margin: 0px 0px 18px 0px;
+  float: left;
+  list-style: none;
+  padding: 20px;
+}
+.polaroids li {
+  display: block;
+}
+.polaroids a {
+  background: #fff;
+  display: block;
+  float: left;
+  margin: 0 0 27px 30px;
+  width: auto;
+  padding: 10px 10px 15px;
+  text-align: center;
+  font-family: "Marker Felt", sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -webkit-transform: rotate(-2deg);
+  -webkit-transition: -webkit-transform .15s linear;
+  -moz-transform: rotate(-2deg);
+}
+.polaroids img {
+  display: block;
+  height: 110px;
+  width: 120px;
+  margin: 10px 10px 10px 0px;
+}
+/*.polaroids img.small {
+  height: 100px;
+  width: 100px;
+}*/
+
+
+
+.polaroids a:after {
+  content: attr(title);
+}
+
+.polaroids li:nth-child(even) a {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+}
+.polaroids li:nth-child(3n) a {
+  -webkit-transform: none;
+  position: relative;
+  top: -5px;
+  -moz-transform: none;
+}
+.polaroids li:nth-child(5n) a {
+  -webkit-transform: rotate(5deg);
+  position: relative;
+  right: 5px;
+  -moz-transform: rotate(5deg);
+}
+.polaroids li:nth-child(8n) a {
+  position: relative;
+  right: 5px;
+  top: 8px;
+}
+.polaroids li:nth-child(11n) a {
+  position: relative;
+  left: -5px;
+  top: 3px;
+}
+
+.polaroids li a:hover,
+.polaroids a:hover {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  position: relative;
+  z-index: 5;
+}
+
+
+/*bar graph*/
+
+.graph {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #aeaeae;
+    background-color: #eaeaea;
+}
+.bar {
+    width: 8px;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    background-color: #aeaeae;
+    vertical-align: baseline;
+}
