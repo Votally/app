@@ -20,6 +20,10 @@
   color: #F7EAC8;
 }
 
+.votally-orange{
+  color: #F7BD7A; 
+}
+
 .votally-back-red{
   background-color: #DB3340;
 }
@@ -34,6 +38,10 @@
 
 .votally-back-cream{
   background-color: #F7EAC8;
+}
+
+.votally-back-orange{
+  background-color: #F7BD7A; 
 }
 
 .bar-footer{
@@ -112,16 +120,16 @@
 
 .sender-name{
   text-align: center;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
-  height: 34px;
+  height: 30px;
   font-size: 30px;
 }
 
 .pending-polaroid a {
   background: #fff;
   display: block;
-  margin: 30px;
+  margin: 20px 30px 30px 30px;
   padding: 10px;
   text-align: center;
   font-family: "Marker Felt", sans-serif;
