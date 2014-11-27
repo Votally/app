@@ -41,7 +41,7 @@
 }
 
 .shutter{
-  font-size: 40px;
+  font-size: 60px;
   color: #aaa;
 }
 
@@ -49,11 +49,12 @@
 
 .home-header{
  border: none;
- height: 50px;
+ height: 60px;
+ background: #EDD5B2;
 }
 
 .home-header div.title{
- height: 50px;
+ height: 60px;
  padding: 10px;
 }
 
@@ -62,7 +63,7 @@
 }
 
 .polaroid-container{
-  margin-top:50px;
+  margin-top:55px;
   padding: 8px;
 }
 
@@ -70,8 +71,8 @@
   position: relative;
   overflow: hidden;
   background: #fff;
-  margin: 0 10px 20px 10px;
-  padding: 10px 10px 20px 10px;
+  margin: 2% 2% 6% 2%;
+  padding: 2% 4% 6% 4%;
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
   -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
@@ -85,11 +86,12 @@
 }
 
 .polaroid-text{
-  margin-top: 10px;
+  margin-top: 6px;
   border: none;
 }
 
 .polaroid-text input{
+  line-height: 17px;
   font-size: 17px;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -101,12 +103,55 @@
 
 .home-footer{
   height: 70px;
+  position: fixed;
+}
+
+.home-footer .footer-left{
+  margin: auto 0;
+  width: 25%;
+}
+
+.home-footer .footer-center{
+  width: 50%;
+  text-align: center;
+}
+
+.home-footer .footer-right{
+  margin: auto 0;
+  width: 25%;
 }
 
 .home-footer button{
-  margin:0 30px 30px 30px;
-  width: 60px;
+  margin: 8px 10px 8px 10px;
+  width: 70px;
 }
+
+.home-footer .upload{
+  float: left;
+  background-color: #35404F;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  border-radius: 8px;
+  border-color: #35404F;
+  max-height: 70px;
+}
+
+.home-footer .send{
+  float: right;
+  background-color: #1FDA9A;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  border-radius: 8px;
+  border-color: #1FDA9A;
+  max-height: 70px;
+}
+
+.home-footer .camera{
+  overflow: visible;
+  margin: 0 auto;
+  max-height: 70px;
+}
+
 
 /*============FOR PENDING VIEW TEMPLATE=============*/
 
@@ -804,12 +849,8 @@ body {
 
 /*============FOR LOGIN & SIGNUP VIEW=============*/
 .login-logo, .signup-logo{
-  margin: 70px 0px 30px 0px;
+  margin: 20px;
   text-align: center;
-}
-
-.login-logo img, .signup-logo img{
-  width: 260px;
 }
 
 .login-form input, .signup-form input{
@@ -841,13 +882,8 @@ body {
   color: #FFFFFF;
 }
 
-.login-form label.login-signup{
-  padding-top: 30px;
-  text-align: center;
-}
-
-.login-form button.signup, .signup-form button.signup{
-  background-color: #f7bd7a; /*votally-orange*/
+.login-form button.sign-up{
+  background-color: #f7bd7a; /*votally-cream*/
 }
 
 /*============FOR FRIENDS VIEW=============*/
