@@ -118,7 +118,7 @@
   color: #FFF;
   font-size: 24px;
   line-height: 24px;
-  padding: 2px 14px;
+  padding: 2px 12px;
 }
 
 .votally-button-blue{
@@ -164,6 +164,8 @@
   border-radius: 8px;
   border-color: #35404F;
   max-height: 70px;
+  line-height: 40px;
+  height: 40px;
 }
 
 .votally-footer .send{
@@ -174,6 +176,8 @@
   border-radius: 8px;
   border-color: #1FDA9A;
   max-height: 70px;
+  line-height: 40px;
+  height: 40px;
 }
 
 .votally-footer .camera{
@@ -190,6 +194,8 @@
   border-radius: 8px;
   border-color: #db3340;
   max-height: 70px;
+  line-height: 40px;
+  height: 40px;
 }
 
 
@@ -255,7 +261,7 @@
   min-height: 17px;
   line-height: 17px;
   font-size: 17px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Kalam', sans-serif;
 }
 
 *:focus{
@@ -281,7 +287,7 @@
   margin: 20px 30px 30px 30px;
   padding: 10px;
   text-align: center;
-  font-family: "Marker Felt", sans-serif;
+  font-family: "Kalam", sans-serif;
   text-decoration: none;
   color: #333;
   font-size: 16px;
@@ -521,7 +527,7 @@ li.polaroids {
   width: auto;
   /*padding: 10px 10px 15px;*/
   text-align: center;
-  font-family: "Marker Felt", sans-serif;
+  font-family: "Kalam", sans-serif;
   text-decoration: none;
   color: #333;
   font-size: 16px;
